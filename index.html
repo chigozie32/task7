@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Food Ordering App</title>
+  <link rel="stylesheet" href="style.css" />
+<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+</head>
+<body>
+       <!--Header section-->
+  <section class="header">
+        <h3>Chigozie's Kitchen</h3>
+        <p>Delicious and healthy indigenous meals</p>
+    </section>
+    <section class="hero">
+      <h5>Delicious Local Dishes, Delivered fast</h5>
+      <p>Order your favourite Nigerian meals - hot, fresh, and made with love.
+      From jollof rice to Nkwobi
+      we've got you covered!
+      </p>
+      <a href="#food-menu"><button>View Menu</button></a>
+    </section>
+<!--slide start-->
+<div class="sliding">
+<div class="slider">
+        <section class="slides">
+            <div id="box1" class="slide"><p>Abacha</p></div>
+            <div id="box2" class="slide"><p>Egusi</p></div>
+            <div id="box3" class="slide"><p>Jollof</p></div>
+            <div id="box4" class="slide"><p>Nkwobi</p></div>
+            <div id="box5" class="slide"><p>Pepper Soup</p></div>
+            <div id="box6" class="slide"><p>Kpomo</p></div>
+            <div id="box7" class="slide">Suya</div>
+            <div id="box8" class="slide">Okro Soup</div>
+            <div id="box9" class="slide"><p>Okpa & Pap</p></div>
+            <div id="box10" class="slide"><p>Moimoi & Custard</p></div>
+          </section>
+          
+        </div>
+        <div class="dots"></div>
+</div>
+<!--slide end-->
+
+    <!--Main content in the body-->
+    <main>
+
+    <section class="animated-text">
+    <h1>Chigozie's kitchen... Locally Made Delicacies.</h1>
+    <p class="p"> One of the best kitchen when it comes to <span class="span-appear">Locally made delicacies</span>
+        in Africa!</p>
+        </section>
+
+  <h1 class="h1" id="food-menu">🍽️Food Menu...</h1>
+  <div class="container">
+    <!-- Menu Section left side-->
+    <div class="menu" id="menu"></div>
+
+    <!-- Cart Section right side-->
+    <div class="cart">
+      <h2>🛒 My Plate</h2>
+      <ul id="cart-items"></ul>
+      <p><strong>Total: ₦<span id="total">0</span></strong></p>
+      <button id="submitBtn">Submit Order</button>
+      <button id="printBtn">Print Order</button>
+    </div>
+  </div>
+
+  <!-- Custom Alert -->
+  <div id="customAlert" class="custom-alert hidden">
+    <!-- <div class="alert-box">
+      <h3>Order Submitted</h3>
+      <p>🎉 Order submitted successfully!<br>Your meal will be ready soon.</p>
+      <button id="alertOkBtn">Continue</button>
+    </div> -->
+
+     <div class="alert-box">
+      <h3>Order Submitted</h3>
+      <p></p>
+      <button id="alertOkBtn">Continue</button>
+    </div>
+  </div>
+
+  <!-- Popup for adding to cart -->
+  <div id="addedPopup" class="popup hidden">✔️ Meal Added To Your Plate!</div>
+</main>
+  <script src="script.js"></script>
+</body>
+</html>

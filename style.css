@@ -1,0 +1,365 @@
+html{
+  scroll-behavior: smooth;
+}
+body{
+  padding: 0;
+  margin: 0;
+  background-color: whitesmoke;
+}
+main {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+
+.header{
+    text-align: center;
+    margin: 0;
+    padding: 40px;
+    color: #2980b9;
+    background: url(images/Egusi.jpg);
+    height: auto;
+    width: auto;
+    margin: 0 0 100px 0;
+
+}
+.header h3{
+  font-family: "Lobster", cursive;
+    margin: 0;
+    padding: 0;
+    color: black;
+    text-shadow: 5px 5px 0 white;
+    font-size: 3.4rem;
+}
+.header p{
+    margin: 0;
+    font-family: cursive;
+    font-size: 1rem;
+}
+
+.hero{
+  width: 400px;
+  display: inline-block;
+}
+.hero h5{
+  font-size: 2rem;
+  margin-top: -70px;
+  color: #2980b9;
+  text-align: center;
+}
+.hero p{
+  margin-top: -50px;
+  font-size: 1em;
+  color: #d35400;
+}
+.hero button{
+  width: 100px;
+  height: 30px;
+  background-color: #2980b9;
+  border: none;
+  border-radius: 7px;
+  color: white;
+  margin-left: 20px;
+  transition: 0.2s ease-in-out;
+}
+.hero button:hover{
+   background-color: #154b6e;
+}
+/* slide */
+/* slider styling */
+.slider {
+    width: 350px;
+    height: 350px;
+    overflow: hidden;
+    margin: 20px auto;
+    /* border: 2px solid #000; */
+    border: none;
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    margin-top: -70px;
+}
+
+.slide{
+    width: 400px;
+    height: 400px;
+    flex-shrink: 0;
+    background-color: skyblue;
+    display: block;
+    justify-self: center;
+    align-items: center;
+    font-size: 2rem;
+}
+.slides{
+    display: flex;
+    transition: 0.5s ease-in-out;
+    width: calc(400px * 8);
+}
+
+#box1{
+  background-image: url(images/Abacha.jpg);
+  background-position: center;
+  background-size: cover;
+}
+#box2{
+  background-image: url(images/Egusi.jpg);
+  background-position: center;
+  background-size: cover;
+
+}
+#box3{
+  background-image: url(images/Jollof.jpg);
+  background-position: center;
+  background-size: cover;
+
+}
+#box4{
+  background-image: url(images/Nkwobi.jpg);
+  background-position: center;
+  background-size: cover;
+
+}
+#box5{
+  background-image: url(images/Pepper.jpg);
+  background-position: center;
+  background-size: cover;
+
+}
+#box6{
+  background-image: url(images/Kpomo.jpg);
+  background-position: center;
+  background-size: cover;
+
+}
+#box7{
+  background-image: url(images/Suya.jpg);
+  background-position: center;
+  background-size: cover;
+
+}
+#box8{
+  background-image: url(images/Okro.jpg);
+  background-position: center;
+  background-size: cover;
+
+}
+#box9{
+  background-image: url(images/Okpa.jpg);
+  background-position: center;
+  background-size: cover;
+
+}
+#box10{
+  background-image: url(images/Moimoi.jpg);
+  background-position: center;
+  background-size: cover;
+
+}
+.dots{
+    text-align: center;
+    margin-top: 10px;
+}
+.dot{
+    display:inline-block;
+    width: 12px;
+    height: 12px;
+    margin: 5px;
+    border-radius: 50%;
+    background-color: gray;
+    cursor: pointer;
+}
+.dot:active{
+    background-color: #2980b9;
+}
+
+
+h1{ 
+    width: 45ch;
+    text-wrap: nowrap;
+    overflow: hidden;
+    margin: 40px 0;
+    color: #d35400;
+    animation: typing 5s steps(45) infinite alternate-reverse;
+    /* text-align: center;  */
+    text-shadow: 4px 1px black;
+    font-size: 2.4rem;
+}
+.p{
+    width: 100ch;
+    overflow: hidden;
+    text-wrap: nowrap;
+    animation: typing 7s steps(45) infinite alternate-reverse;
+    color: rgb(38, 135, 215);
+    margin: -30px 0 0 0;
+}
+.span-appear{
+    color: #27ae60;
+    font-size: 1.3rem;
+}
+
+/* This adds the text disappearing effect in the h1 element. */
+@keyframes typing {
+    from{
+        width: 0;
+    }
+  }
+
+.h1 {
+  text-align: left;
+  color:#2980b9;
+  /* color: #d35400; */
+  margin-bottom: 3px;
+  font-size: 1.5em;
+  text-shadow: none;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.menu {
+  flex: 2;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.food-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 0 10px #ccc;
+  text-align: center;
+}
+
+.food-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.food-card button {
+  margin-top: 10px;
+  padding: 8px 12px;
+  background-color: #27ae60;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+.food-card button:hover{
+ background-color: #1d7c44;
+}
+
+.cart {
+  flex: 1;
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #ccc;
+}
+
+.cart ul {
+  list-style: none;
+  padding: 0;
+}
+
+.cart button {
+  margin: 10px 5px 0 0;
+  padding: 8px 12px;
+  background-color: #2980b9;
+  color: white;
+  display: inline-block;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+.cart button:hover{
+  background-color: #1d5276;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 8px 0;
+}
+
+.cart-item span {
+  margin: 0 6px;
+}
+
+.quantity-buttons {
+  border: none;
+  padding: 3px 8px;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.custom-alert {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.alert-box {
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.alert-box button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: #2ecc71;
+  border: none;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.alert-box button:hover{
+background-color: #2db867;
+}
+
+.hidden {
+  display: none;
+}
+
+.popup {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #2ecc71;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px #999;
+  animation: fadeInOut 2s ease-in-out;
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0; transform: translateY(-10px); }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { opacity: 0; transform: translateY(-10px); }
+}
+
+.cart-item-control{
+  display: inline-flex;
+  gap: 5px;
+  margin-left: 10px;
+  vertical-align: middle;
+}
