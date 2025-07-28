@@ -1,3 +1,6 @@
+*{
+  font-family: cursive;
+}
 html{
   scroll-behavior: smooth;
 }
@@ -6,12 +9,6 @@ body{
   margin: 0;
   background-color: whitesmoke;
 }
-main {
-  font-family: 'Segoe UI', sans-serif;
-  margin: 0;
-  padding: 20px;
-}
-
 .header{
     text-align: center;
     margin: 0;
@@ -170,6 +167,11 @@ main {
 }
 .dot:active{
     background-color: #2980b9;
+}
+
+main {
+  margin: 0;
+  padding: 20px;
 }
 
 
