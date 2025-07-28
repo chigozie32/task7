@@ -1,3 +1,4 @@
+// Data for  the food menu that will be displayed
 const menuItems = [
    {
     id: 1,
@@ -71,22 +72,45 @@ const menuItems = [
     image: "images/Kpomo.jpg",
   },
 ];
-
+// Load saved cart items from local storage (if any) or start with an empty array
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
+// get refrences to DOM element by  their IDs
+
+// gets the menu container where food cards will be displayed 
 const menu = document.getElementById("menu");
+
+// This gets the total display where selected cart-items will be shown
 const cartItems = document.getElementById("cart-items");
+
+// gets the total display element to show the total price
 const totalDisplay = document.getElementById("total");
+
+// gets the custom alert element (the pop uop)
 const customAlert = document.getElementById("customAlert");
+
+// gets the ok button inside to alert pop up
 const alertOkBtn = document.getElementById("alertOkBtn");
+
+// get the submitt button element for placing the order
 const submitBtn = document.getElementById("submitBtn");
+
+//get the print button to allow printing the order
 const printBtn = document.getElementById("printBtn");
+
+//get the popup that shows a message when an item is added to cart
 const popup = document.getElementById("addedPopup");
 
-// Display menu
+// Display menu(Loops through each food items and create a card for it)
 menuItems.forEach((item) => {
+
+  // creates a new div element for the food cart
   const card = document.createElement("div");
+
+  //adds a class name to the card for styling(from css)
   card.className = "food-card";
+
+  // Fills the card with image, name, description, price, and button
   card.innerHTML = `
     <img src="${item.image}" alt="${item.name}" />
     <h3>${item.name}</h3>
@@ -94,28 +118,47 @@ menuItems.forEach((item) => {
     <p><strong>₦${item.price}</strong></p>
     <button onclick="addToCart(${item.id})">Add to Plate</button>
   `;
+
+  // add this card to the menu container in the Html
   menu.appendChild(card);
 });
 
+// this function adds a food item to the cart using it's id
 function addToCart(id) {
+  //finds the food item in the menuItems array by matching the ID 
   const item = menuItems.find((food) => food.id === id);
+
+  // checks if the item is already in the cart
   const existing = cart.find((food) => food.id === id);
 
+  // if the item is in the cart it increases it's quantity
   if (existing) {
     existing.quantity += 1;
   } else {
+
+    // if it's a new item, set its quantity to 1 and add it to the cart
     cart.push({ ...item, quantity: 1 });
   }
 
+  //shows a brief confirmation message
   showPopup();
+
+  // update the cart display
   updateCart();
+
+  //save cart
   saveCart();
 }
 
+//this function updates the cart display and total 
 function updateCart() {
+
+  //clear what ever is already inside the cart container
   cartItems.innerHTML = "";
 
+//loop through every item in the cart to show  it on the page
   cart.forEach((item) => {
+    
     const li = document.createElement("li");
     li.innerHTML = `
       <div><strong>${item.name}</strong> - ₦${item.price} x ${item.quantity}</div>
@@ -132,15 +175,20 @@ function updateCart() {
   totalDisplay.textContent = total;
 }
 
+//add 1 to the current quantity
 function increaseQty(id) {
   const item = cart.find((i) => i.id === id);
   if (item) {
     item.quantity++;
+
+//refresh the cart to show the new quantity and total
     updateCart();
     saveCart();
   }
 }
+  
 
+//this function descrease the quantity of a cart item by 1
 function decreaseQty(id) {
   const item = cart.find((i) => i.id === id);
   if (item && item.quantity > 1) {
@@ -160,7 +208,7 @@ function showPopup() {
   popup.classList.remove("hidden");
   setTimeout(() => popup.classList.add("hidden"), 1000);
 }
-
+//this pops up when you try submitting with no other selected
 submitBtn.addEventListener("click", () => {
   if (cart.length === 0) {
     alert("🛑 Please add something to your plate first.");
@@ -194,15 +242,6 @@ alertOkBtn.addEventListener("click", () => {
   customAlert.classList.add("hidden");
 });
 
-// printBtn.addEventListener("click", () => {
-//   if (cart.length === 0) {
-//     alert("🛑 No items to print.");
-//     return;
-//   }
-  
-//   window.print();
-// });
-
 // 5. Print order
 document.getElementById("printBtn").addEventListener("click", () => {
   if (cart.length === 0) {
@@ -225,7 +264,7 @@ document.getElementById("printBtn").addEventListener("click", () => {
 updateCart();
 
 
-//slide start
+//slide start (For the automatic image slider)
 let currentSlide = 0;
 
 const slides = 
@@ -233,7 +272,7 @@ document.querySelector('.slides');
 const totalSlides = document.querySelectorAll('.slide').length;
 const dotsContainer = document.querySelector( '.dots');
 
-//Generate dots
+//Generate dots to allow you manually coontrol the image that shows on the slide
 for (let i = 0; i < totalSlides; i++)
 {
     const dot = document.createElement('span');
@@ -258,10 +297,6 @@ function showSlide(index) {
     const offset = -currentSlide * slideWidth;
     slides.style.transform = 
     `translateX(${offset}px)`;
-    // const offset = -currentSlide * 400;
-    // `translateX(${offset}px)`;
-    // console.log("Current offset:", offset)
-
     //Updates dots
     dots.forEach(dot => 
         dot.classList.remove('active'));
@@ -269,7 +304,7 @@ function showSlide(index) {
     dots[currentSlide].classList.add('active');
 }
 
-//Auto slide every 3 seconds
+//Auto slide every 2 seconds
 let slideInterval = setInterval(() =>
 {
     showSlide (currentSlide + 1);
