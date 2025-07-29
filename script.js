@@ -48,7 +48,7 @@ const menuItems = [
     name: "Okpa & Pap",
     description: "Steamed bambara nut pudding and pap.",
     price: 2100,
-    image: "images/okpa.jpg",
+    image: "images/Okpa.jpg",
   },
   {
     id: 8,
