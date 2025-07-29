@@ -5,14 +5,14 @@ const menuItems = [
     name: "Jollof Rice",
     description: "Spicy tomato rice with veggies.",
     price: 1200,
-    image: "images/jollof.jpg",
+    image: "images/Jollof.jpg",
   },
   {
     id: 2,
     name: "Egusi Soup",
     description: "Melon seed soup with assorted meat.",
     price: 2000,
-    image: "images/egusi.jpg",
+    image: "images/Egusi.jpg",
   },
    {
     id: 3,
@@ -33,7 +33,7 @@ const menuItems = [
     name: "Moi Moi",
     description: "Delicious steamed bean pudding.",
     price: 1800,
-    image: "images/moimoi.jpg",
+    image: "images/Moimoi.jpg",
   },
  
   {
